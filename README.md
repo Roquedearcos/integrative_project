@@ -1,33 +1,33 @@
-# Control de acceso en fábrica mediante visión por computador y PLN
-Descripción general
-Este proyecto simula un sistema de control de acceso en una fábrica mediante Visión por Computador y Procesamiento de Lenguaje Natural. Su objetivo es permitir o denegar el paso a trabajadores en función de si cumplen con la normativa de seguridad (EPIs).
+# 🏭 Factory Access Control System Using NLP and Computer Vision
 
-El sistema consta de tres módulos principales:
+This project simulates an automated access control system for a factory. The system determines whether a worker can enter a facility based on compliance with safety regulations (PPE: Personal Protective Equipment). It combines **Natural Language Processing (NLP)** and **Computer Vision**, and was developed as part of an academic project.
 
-## modulo_pln.py
+---
 
-Se encarga de extraer los Equipamientos de Protección Individual (EPIs) desde un PDF no estandarizado.
+## Overview
 
-Utiliza la API de ChatGPT para procesar el texto y genera un archivo JSON con los EPIs requeridos.
+The system operates in three main stages:
 
-## simulacion.py
+### 1. `modulo_pln.py` – NLP for Policy Extraction
+- Reads a non-standardized PDF document describing safety policies.
+- Uses the **OpenAI GPT API** to extract PPE requirements for areas and tasks.
+- Outputs the structured data in a `JSON` format.
 
-Simula la cámara de una fábrica.
+### 2. `simulacion.py` – Camera Simulation + Prompt Generation
+- Simulates a camera by allowing the user to manually select an image.
+- Lets the user choose a work area, then extracts the required PPEs from the JSON.
+- Automatically generates an English-language prompt and uploads the image and prompt to a **remote cluster** at CESGA (Supercomputing Center of Galicia).
 
-Permite introducir manualmente imágenes para probar el sistema sin necesidad de hardware.
+### 3. `modulo_vc.py` – Computer Vision Analysis
+- Loads and runs the **Qwen2-VL-7B-Instruct** model.
+- Analyzes the image and checks whether the worker is wearing the required PPEs.
+- Outputs a result text indicating access is **granted** or **denied** based on detection.
 
-## modulo_vc.py
+---
 
-Analiza las imágenes utilizando el modelo Qwen2-VL-7B-Instruct (ejecutado en el CESGA).
+## ⚙️ Requirements
 
-Determina si el trabajador cumple con los EPIs necesarios y decide si se le permite el acceso.
+Install all required Python packages using:
 
-## ⚙️ Requisitos
-Python 3.9+
-
-openai (para la API de ChatGPT)
-
-torch, transformers, opencv, etc. (detallar según el código real)
-
-Acceso al CESGA (si se desea ejecutar el modelo completo)
-
+```bash
+pip install -r requirements.txt
