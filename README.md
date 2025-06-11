@@ -4,7 +4,7 @@ This project simulates an automated access control system for a factory. The sys
 
 ---
 
-## Overview
+## 📌 Overview
 
 The system operates in three main stages:
 
