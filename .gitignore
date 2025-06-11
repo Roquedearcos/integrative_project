@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de notebooks o checkpoints (si los usas)
+*.ipynb_checkpoints
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de entornos virtuales
+env/
+venv/
+
+# Configuración del editor
+.vscode/
+.idea/
+
+# Archivos generados por tu proyecto
+normativas.json
+prompt_vlm.txt
+respuesta.txt
+
+# Archivos de datos/imágenes (opcional)
+*.jpg
+*.png
+*.pdf
+*.jpeg
+
+# Otros
+*.log
