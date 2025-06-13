@@ -23,7 +23,13 @@ The system operates in two main stages:
 > ⚠️ The vision model is large and is executed remotely on FinisTerrae III at CESGA.
 
 ---
+## 🎥 Demo Video
 
+Watch a full demonstration of the system in action:
+
+▶️ [Watch on YouTube](https://www.youtube.com/watch?v=Lef8mRv6Big)
+
+---
 ## ⚙️ Requirements
 
 Install all required Python packages using:
