@@ -1,0 +1,6 @@
+Check if the worker in the image is wearing all the required Personal Protective Equipment (PPE) correctly:
+- gloves
+- helmet
+Respond in JSON format with:
+- 'true' if each PPE items are present and properly worn
+- 'false' if any are missing or improperly worn
