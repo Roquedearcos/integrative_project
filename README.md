@@ -23,6 +23,7 @@ The system operates in two main stages:
 > ⚠️ The vision model is large and is executed remotely on FinisTerrae III at CESGA.
 
 ---
+
 ## 🎥 Demo Video
 
 Watch a full demonstration of the system in action:
@@ -30,6 +31,7 @@ Watch a full demonstration of the system in action:
 ▶️ [Watch on YouTube](https://www.youtube.com/watch?v=Lef8mRv6Big)
 
 ---
+
 ## ⚙️ Requirements
 
 Install all required Python packages using:
@@ -38,6 +40,7 @@ Install all required Python packages using:
 pip install -r requirements.txt
 ```
 ---
+
 ## 🚀 How to Run
 
 > This project is modular and each script can be run independently. Here’s the typical usage flow:
@@ -61,6 +64,31 @@ python modulo_vc.py
 ```
 - This analyzes the image using the Qwen2-VL-7B-Instruct model.
 - Outputs a decision and a log in `respuesta.txt`.
+
+---
+
+## 📂 Example Assets
+
+The repository includes a set of example files located in the `assets/` folder, useful for testing and demonstrating the system:
+
+### 📄 Sample Safety Policy PDFs
+Used as input to extract EPI (PPE) requirements:
+
+- [`assets/NORMATIVA_EPIS_1.pdf`](assets/NORMATIVA_EPIS_1.pdf)
+- [`assets/NORMATIVA_EPIS_2.pdf`](assets/NORMATIVA_EPIS_2.pdf)
+- [`assets/NORMATIVA_EPIS_3.pdf`](assets/NORMATIVA_EPIS_3.pdf)
+- [`assets/NORMATIVA_EPIS_4.pdf`](assets/NORMATIVA_EPIS_4.pdf)
+- [`assets/NORMATIVA_EPIS_5.pdf`](assets/NORMATIVA_EPIS_5.pdf)
+
+### 🖼️ Sample Image
+Used to simulate the factory camera:
+
+- [`assets/prueba.jpg`](assets/prueba.jpg)
+
+### 🧪 Generated Files (examples)
+- [`assets/normativas.json`](assets/normativas.json) – JSON with extracted rules
+- [`assets/prompt_vlm.txt`](assets/prompt_vlm.txt) – Generated prompt for vision model
+- [`assets/ruta_salida_modelo.txt`](assets/ruta_salida_modelo.txt) – Example of model output path
 
 ---
 
